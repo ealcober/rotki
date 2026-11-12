@@ -71,7 +71,8 @@ Aplican las reglas de usuario (`~/.claude/CLAUDE.md`) y, además, estas propias 
    con el tratamiento de `docs/dev/arquitectura/09-adr-comisiones.md`.
 10. **Acceso por etapas.** Durante el desarrollo la instancia es de un único usuario y no se expone a
     Internet; el acceso de terceros y los planes de pago llegan con
-    `docs/dev/arquitectura/05-adr-monetizacion-y-acceso.md`.
+    `docs/dev/arquitectura/05-adr-monetizacion-y-acceso.md`. El administrador queda fuera de toda
+    restricción de plan en todas las etapas.
 
 ## Convenciones
 

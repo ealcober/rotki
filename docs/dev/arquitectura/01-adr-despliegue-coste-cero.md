@@ -14,7 +14,8 @@ Requisitos del usuario: uso personal inmediato; app pública con anuncios en un 
 `ealcober.com` más adelante; soporte de volúmenes de alta frecuencia (millones de operaciones); acceso por
 Telegram; capa agéntica con acceso total al contexto del usuario.
 
-Vías de ingreso: planes de pago según volumen de transacciones y anuncios en la web pública (ADR 05).
+Vías de ingreso: planes de pago según volumen de transacciones, años de historial y periodo de acceso, y
+anuncios en la web pública (ADR 05).
 Durante el desarrollo solo accede el usuario.
 
 ## Opciones evaluadas

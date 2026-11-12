@@ -1,7 +1,8 @@
 # Fase 3 — Importación tolerante
 
 **Resultado:** el usuario arrastra varios CSV/XLSX y la herramienta identifica cada formato, propone el
-mapeo cuando duda, importa sin duplicar y avisa de lo que no pudo leer. Diseño: `../arquitectura/03-adr-importacion-tolerante.md`.
+mapeo cuando duda, importa sin duplicar y avisa de lo que no pudo leer.
+Diseño: `../arquitectura/03-adr-importacion-tolerante.md`.
 
 ## Puntos
 

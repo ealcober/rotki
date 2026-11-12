@@ -16,13 +16,15 @@ contenido pasa al documento que corresponda con su fuente.
 | 8 | Pagar una comisión en un criptoactivo distinto del negociado (BNB, KCS, HYPE como gas) es una transmisión de ese activo a valor de mercado, con su propia ganancia o pérdida. | Fase 11 | Consultas de la DGT sobre permutas y pagos con criptoactivos |
 | 9 | Las unidades gastadas como comisión en una transferencia entre wallets propias salen del inventario FIFO sin generar ganancia ni pérdida, y su coste de adquisición no se traslada a otras unidades. Es la lectura operativa de «irrelevante a efectos del IRPF» (V0648-24). | Fase 11 | Lectura del texto íntegro de la consulta V0648-24 en el buscador de la DGT |
 | 10 | La regla de recompra de dos meses (art. 33.5 LIRPF) no alcanza a los criptoactivos. | Fase 7, propuestas de optimización | Lectura del artículo y de consultas de la DGT; hasta verificarla, las propuestas la aplican como restricción |
-| 11 | El plazo de prescripción de cuatro años (art. 66 LGT) justifica conservar datos y ofrecer planes plurianuales. | Fase 14 | Lectura del artículo |
+| 11 | El plazo de prescripción de cuatro años (art. 66 LGT) justifica que algún plan admita varios ejercicios a la vez y que los datos se conserven. | Fase 14 | Lectura del artículo |
 | 12 | El ámbito `drive.file` de la API de Google Drive limita la app a los ficheros que ella crea y evita la auditoría de seguridad exigida a los ámbitos restringidos. | Fase 13 | Documentación vigente de Google sobre ámbitos OAuth y verificación de apps |
 | 13 | Una base SQLite abierta dentro de una carpeta sincronizada por un cliente de nube puede corromperse. | Fase 13 | Documentación de SQLite sobre corrupción de ficheros; la decisión del ADR 06 no depende del resultado, solo su justificación |
 | 14 | Cobrar los planes en criptoactivos mantiene las obligaciones de facturación e IVA en euros del vendedor, y cada cobro es un ingreso valorado en euros en el momento de recibirlo. | Fase 14 | Revisión con un asesor fiscal antes de abrir la venta |
 | 15 | El nombre y la marca «rotki» no pueden usarse para un producto derivado de pago. | Fase 14 | Política de marca de rotki y consulta a sus mantenedores |
 | 16 | La AGPL-3.0 permite cobrar por el acceso a builds y servicios de un producto derivado mientras el código fuente siga disponible. | Fase 14 | Lectura de `LICENSE.md` y de las FAQ de la FSF sobre venta de software libre |
 | 17 | Los pagos entrantes en cada red de cobro se detectan con fiabilidad usando solo APIs y nodos públicos gratuitos. | Fase 14 | Prueba por red con pagos reales de importe mínimo, cuando el usuario fije las redes |
+| 18 | La mayoría de usuarios supera 100 transacciones por ejercicio (DCA, staking con recompensa diaria). | ADR 05, límites | Medición en la beta cerrada |
+| 19 | Cada red de cobro admite la identificación propuesta sin claves privadas en el servicio: direcciones derivadas desde clave pública extendida (Bitcoin, Ethereum, Hyperliquid), etiqueta de destino (XRP Ledger) y clave de referencia (Solana). | Fase 14 | Documentación de cada red y prueba con un pago de importe mínimo por adaptador |
 
 ## Afirmaciones verificadas que fijan decisiones
 

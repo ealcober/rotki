@@ -11,9 +11,13 @@ Registro fechado de hitos. Cada entrada describe el estado que deja, en presente
 - `data/privado/` está ignorado por git para los exports reales del usuario.
 - Los ADR 01, 02, 05 y 06 tienen preguntas abiertas para el usuario; ninguna fase de implementación ha
   empezado.
-- La documentación recoge como requisitos: acceso exclusivo del usuario durante el desarrollo, planes por
-  volumen (Trader, Pro-Trader a 49,99 € y High Freq Trader a 99,99 €) cobrados en cripto más anuncios, respuesta garantizada con historiales de
-  millones de operaciones, preguntas al usuario ante lo no catalogable, registro de decisiones,
-  tratamiento completo de comisiones y copias cifradas en el Drive del usuario.
+- La documentación recoge como requisitos: acceso exclusivo del usuario durante el desarrollo, planes
+  Trader, Pro-Trader (49,99 €) y High Freq Trader (99,99 €) cobrados en cripto más anuncios, respuesta
+  garantizada con historiales de millones de operaciones, preguntas al usuario ante lo no catalogable,
+  registro de decisiones, tratamiento completo de comisiones y copias cifradas en el Drive del usuario.
 - Decisiones del usuario: planes y anuncios a la vez; mismas capacidades en todos los planes; cobro propio
   en wallets; comisiones entre wallets propias sin efecto en el IRPF por defecto (DGT V0648-24).
+- Decisiones del usuario sobre planes: Trader 1 ejercicio, Pro-Trader 2 ejercicios y 1 mes de acceso,
+  High Freq Trader ejercicios ilimitados y 12 meses; al alcanzar un límite no se guarda más ni se exporta
+  el informe; el administrador queda fuera de toda restricción; redes de cobro Bitcoin, Ethereum,
+  Hyperliquid, XRP Ledger y Solana, con la infraestructura común primero.
