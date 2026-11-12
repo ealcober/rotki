@@ -38,9 +38,9 @@ disco local.**
 - El proveedor de la aplicación nunca almacena datos fiscales de usuarios: copias e informes están en el
   Drive de cada uno, cifradas con su clave.
 - Añadir otro destino (otra nube, un NAS) es añadir un proveedor.
+- Las copias en Drive están disponibles en todos los planes (ADR 05).
 - Perder la clave de la base hace irrecuperables las copias; la interfaz lo advierte al activar la función.
 
 ## Preguntas abiertas para el usuario
 
-1. ¿Las copias en Drive son una capacidad de pago o gratuita (ADR 05)?
-2. Política de retención por defecto.
+1. Política de retención por defecto.

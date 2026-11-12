@@ -20,7 +20,8 @@ Una herramienta de fiscalidad cripto para residentes en España, construida sobr
 11. computa todas las comisiones, en todos los casos, una sola vez;
 12. propone mejoras de la declaración y de los hábitos del usuario como simulaciones con cifras;
 13. guarda copias cifradas e informes en el Drive del propio usuario;
-14. admite acceso de terceros por planes de pago de 1, 3 y 5 años, y anuncios en la web pública.
+14. admite acceso de terceros por planes según volumen (Trader, Pro-Trader, High Freq Trader) cobrados en
+    criptoactivos, y anuncios en la web pública.
 
 ## Fases
 
@@ -39,7 +40,7 @@ Una herramienta de fiscalidad cripto para residentes en España, construida sobr
 | 11 | `11-fase-comisiones.md` | tratamiento de comisiones en todos los casos, con invariantes | 1 |
 | 12 | `12-fase-clasificacion-y-decisiones.md` | clasificador por capas, preguntas al usuario, registro de decisiones | 3, 4 |
 | 13 | `13-fase-respaldo-drive.md` | copias cifradas e informes en el Drive del usuario | 1 |
-| 14 | `14-fase-acceso-y-planes.md` | licencias, planes de 1, 3 y 5 años, acceso de terceros | 10, 13 |
+| 14 | `14-fase-acceso-y-planes.md` | licencias, planes por volumen, cobro propio en cripto, acceso de terceros | 10, 13 |
 
 Camino mínimo para la declaración del usuario: fases 1 → 3 → 4 → 11 → 12 → 6. Las fases 2, 5, 7, 8, 9 y 13
 amplían; la 10 publica y la 14 abre el acceso a terceros. El número de fase es el orden de creación del

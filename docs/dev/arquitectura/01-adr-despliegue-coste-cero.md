@@ -14,7 +14,7 @@ Requisitos del usuario: uso personal inmediato; app pública con anuncios en un 
 `ealcober.com` más adelante; soporte de volúmenes de alta frecuencia (millones de operaciones); acceso por
 Telegram; capa agéntica con acceso total al contexto del usuario.
 
-Vías de ingreso previstas: planes de pago de 1, 3 y 5 años, anuncios en la web pública, o ambas (ADR 05).
+Vías de ingreso: planes de pago según volumen de transacciones y anuncios en la web pública (ADR 05).
 Durante el desarrollo solo accede el usuario.
 
 ## Opciones evaluadas
@@ -53,8 +53,8 @@ Durante el desarrollo solo accede el usuario.
   licencias; los datos fiscales siguen en el equipo de cada usuario (ADR 05).
 - La persistencia fuera del equipo es opcional y va al Drive del propio usuario como copia cifrada
   (ADR 06).
-- La restricción de coste cero se refiere a pagos recurrentes fijos; las comisiones por venta de un
-  intermediario de pagos son proporcionales al ingreso y quedan fuera de ella (afirmación 14).
+- El cobro de los planes es propio y en criptoactivos, sin intermediario de pagos; el servicio de licencias
+  y el vigilante de pagos corren en planes gratuitos (afirmaciones 4 y 17).
 
 ## Preguntas abiertas para el usuario
 
