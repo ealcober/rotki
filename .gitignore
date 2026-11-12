@@ -42,3 +42,6 @@ gha-benchmark.json
 
 # Raw bank API spike data (real financial data, never committed)
 .bank_spike_data/
+
+# fork ealcober: exports reales del usuario, nunca entran en git
+data/privado/

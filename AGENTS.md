@@ -1,5 +1,7 @@
 # AGENTS.md
 
+> **Fork `ealcober/rotki`:** antes de trabajar, lee `docs/dev/01-guia-fork-llm.md` (reglas, ramas y plan del fork).
+
 This file provides guidance for AI coding assistants (e.g., OpenAI Codex CLI, Claude Code, GitHub Copilot Chat) working with code in this repository. It mirrors the content of `CLAUDE.md` with model‑neutral language and a few clarifications useful to any assistant.
 
 ## Project Overview
