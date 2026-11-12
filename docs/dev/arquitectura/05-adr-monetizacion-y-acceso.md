@@ -15,8 +15,9 @@ Condicionantes:
 
 - rotki es de un usuario por instancia (`rotkehlchen/rotkehlchen.py:199`) y los datos viven en el equipo
   de quien la ejecuta (ADR 01).
-- El fork es AGPL-3.0 (`LICENSE.md`) y su código es público: cualquiera puede compilarlo. Lo que se vende
-  es lo que el código público no da por sí solo: builds firmadas y actualizadas, reglas fiscales revisadas
+- El fork es AGPL-3.0 (`LICENSE.md`): el código de toda versión distribuida se publica (ADR 01), así que
+  cualquiera puede compilarla. Lo que se vende
+  es lo que el código publicado no da por sí solo: builds firmadas y actualizadas, reglas fiscales revisadas
   cada ejercicio, servicios (licencias, copias en Drive), guías y soporte (afirmación 16). Es el modelo que
   usa el propio rotki con su suscripción (`rotkehlchen/premium/`).
 - El producto de pago lleva nombre y marca propios (afirmación 15). Dominio provisional:

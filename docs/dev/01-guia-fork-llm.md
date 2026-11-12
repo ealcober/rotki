@@ -29,7 +29,14 @@ el código: comandos, linters, convenciones de Vue/TypeScript, tests y política
 | `fork/main` | rama de trabajo del fork; parte de `develop` |
 | `fork/<tema>` | ramas de trabajo cortas que se integran en `fork/main` |
 
-Remotos: `origin` = `ealcober/rotki`, `upstream` = `rotki/rotki`.
+Remotos — esquema objetivo tras la migración a repositorio privado (fase 1, punto 9); hasta ejecutarla,
+`origin` = `ealcober/rotki`:
+
+| Remoto | Apunta a | Papel |
+|---|---|---|
+| `origin` | repositorio privado de trabajo | recibe todos los push del fork |
+| `upstream` | `rotki/rotki` | sincronización con `develop` |
+| `public` | `ealcober/rotki` (fork público) | solo ramas limpias desde `develop` para PRs a upstream |
 
 Sincronización con upstream:
 
@@ -46,8 +53,9 @@ limpia desde `develop` para poder abrir un PR contra upstream sin arrastrar la c
 
 Aplican las reglas de usuario (`~/.claude/CLAUDE.md`) y, además, estas propias del fork:
 
-1. **Privacidad primero.** El repositorio es público (los forks de repos públicos en GitHub lo son). Ningún
-   dato personal entra en git: ni CSV, ni direcciones de wallet propias, ni IBAN, ni nombres. Los formatos
+1. **Privacidad primero.** El repositorio de trabajo es privado (fase 1, punto 9), y aun así ningún
+   dato personal entra en git: el historial puede acabar público (PRs a upstream, publicación de la
+   fase 10). Ni CSV, ni direcciones de wallet propias, ni IBAN, ni nombres. Los formatos
    de exchange se documentan con **cabeceras y tipos**, nunca con filas reales. Los tests usan datos
    sintéticos.
 2. **Encajar antes que construir.** Antes de crear un módulo, se localiza el equivalente en rotki
@@ -77,6 +85,10 @@ Aplican las reglas de usuario (`~/.claude/CLAUDE.md`) y, además, estas propias 
     del frontend de rotki (`useBreakpoint`, por ejemplo en
     `frontend/app/src/modules/core/common/use-area-visibility-store.ts:85`). Una vista que no se usa en
     móvil no está terminada.
+12. **Toda pregunta lleva recomendación.** Cada pregunta al usuario —de un agente durante el trabajo, de
+    un ADR o de la interfaz (ADR 08)— incluye una opción recomendada y su motivo, deducidos del contexto
+    de la propia pregunta. Una pregunta sin recomendación traslada el trabajo de análisis a quien menos
+    contexto tiene en ese momento.
 
 ## Convenciones
 

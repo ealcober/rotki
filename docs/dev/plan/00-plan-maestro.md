@@ -29,7 +29,7 @@ Una herramienta de fiscalidad cripto para residentes en España, construida sobr
 
 | Fase | Documento | Resultado | Depende de |
 |---|---|---|---|
-| 1 | `01-fase-cimientos.md` | entorno, suite en verde, benchmark de volumen, perfil fiscal ES | — |
+| 1 | `01-fase-cimientos.md` | entorno, suite en verde, benchmark de volumen, perfil fiscal ES, repositorio privado | — |
 | 2 | `02-fase-bybit-regiones.md` | Bybit Global y Bybit EU seleccionables (candidato a PR upstream) | 1 |
 | 3 | `03-fase-importacion-tolerante.md` | detector de formatos, Trade Republic, Bybit CSV, variantes KuCoin | 1 |
 | 4 | `04-fase-rendimientos-devengo.md` | intereses y staking valorados en el devengo, clasificados para IRPF | 1 |

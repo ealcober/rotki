@@ -47,8 +47,10 @@ Durante el desarrollo solo accede el usuario.
 ## Consecuencias
 
 - La capa agéntica y el bot de Telegram se ejecutan junto a la instancia (ADR 02 y fase 9).
-- La licencia AGPL-3.0 de rotki obliga a publicar el código de cualquier versión modificada que se ofrezca
-  por red; el fork ya es público, así que la obligación queda cubierta mientras `origin` esté al día.
+- La licencia AGPL-3.0 de rotki obliga a entregar el código de toda versión modificada que se distribuya
+  u ofrezca por red a terceros. El repositorio de trabajo es privado (fase 1, punto 9) y durante el
+  desarrollo no hay distribución ni servicio a terceros, así que no hay obligación; al distribuir
+  (fase 10) se publica el código de cada versión distribuida.
 - Si la superficie pública llega a necesitar cómputo de servidor, se reabre este ADR.
 - Los planes de pago se apoyan en licencias verificables sin conexión y en un servicio mínimo de
   licencias; los datos fiscales siguen en el equipo de cada usuario (ADR 05).

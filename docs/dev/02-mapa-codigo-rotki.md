@@ -105,6 +105,19 @@ rotki incluye un motor de incidencias en `rotkehlchen/history/data_issues/`, con
 El MCP de upstream carga las tablas analíticas con `pandas` (`rotkehlchen/mcp/analytics.py:14`); las
 herramientas del fork agregan en SQL para acotar la memoria (ADR 07).
 
+## Benchmark y datos sintéticos
+
+Upstream trae la infraestructura completa de medición; el benchmark de la fase 1 la extiende, no la
+reconstruye.
+
+| Pieza | Ubicación | Notas |
+|---|---|---|
+| Perfiles sintéticos deterministas | `tools/scenarios/` (`profiles/empty.py`, `small.py`, `whale.py` con ~400k eventos) | caché por esquema en `cache.py`; CLI `uv run python -m tools.scenarios build --profile <p>` |
+| Harness macro | `tools/bench/` (`run` y `compare` base/head) | arranca el backend real y mide por la API; muestras y estadísticas en `stats.py` |
+| Operaciones medidas | `tools/bench/operations.py:94` (`OPERATIONS`) | historial paginado/filtrado, búsqueda de activos, balances, netvalue, redecode; **no mide importación CSV ni informe de P&L** |
+| Microbenchmarks | `rotkehlchen/tests/benchmarks/` | excluidos de la suite normal (`pyproject.toml:539`); `pytest -m benchmark --benchmark-only` |
+| Workflow de CI | `.github/workflows/rotki_benchmarks.yml` | opt-in por etiqueta `run-benchmarks` o `[bench]` en el título del PR |
+
 ## Comisiones
 
 | Pieza | Ubicación |

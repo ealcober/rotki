@@ -26,6 +26,8 @@ contenido pasa al documento que corresponda con su fuente.
 | 18 | La mayoría de usuarios supera 100 transacciones por ejercicio (DCA, staking con recompensa diaria). | ADR 05, límites | Medición en la beta cerrada |
 | 19 | Cada red de cobro admite la identificación propuesta sin claves privadas en el servicio: direcciones derivadas desde clave pública extendida (Bitcoin, Ethereum, Hyperliquid), etiqueta de destino (XRP Ledger) y clave de referencia (Solana). | Fase 14 | Documentación de cada red y prueba con un pago de importe mínimo por adaptador |
 | 20 | Las vistas de rotki que usa el fork son utilizables en anchos de móvil y tablet. | Todas las fases con interfaz | Recorrido de la fase 1, punto 8 |
+| 21 | Un fork público de GitHub no puede hacerse privado; la vía es duplicar el repositorio (clon espejo a un repositorio privado nuevo). | Fase 1, punto 9 | Documentación vigente de GitHub al ejecutar la migración; comprobar también la opción «leave fork network» en Settings |
+| 22 | Los repositorios privados tienen minutos de GitHub Actions limitados por plan (los públicos, gratis). | Fase 1, punto 3 | Página de precios de GitHub Actions vigente |
 
 ## Afirmaciones verificadas que fijan decisiones
 
@@ -50,3 +52,4 @@ contenido pasa al documento que corresponda con su fuente.
 | «Oracle Always Free da 4 OCPU / 24 GB» | Documentación de Oracle con los nuevos límites | Las cifras de guías de terceros caducan |
 | «Hay que construir la capa MCP desde cero» | `rotkehlchen/mcp/` existe con registro, privacidad y transporte | Mapear upstream antes de diseñar |
 | «El motor de avisos se construye desde cero» | `rotkehlchen/history/data_issues/` existe con tabla, estados, detectores y remediación | Mapear upstream antes de diseñar, también lo que no se buscaba |
+| «El benchmark de la fase 1 necesita un generador de eventos sintéticos nuevo» | `tools/scenarios/` (perfiles deterministas con caché) y `tools/bench/` (harness macro con comparación base/head) existen | Tercera caída por el mismo patrón: mapear upstream antes de diseñar, incluidas las carpetas `tools/` fuera del paquete principal |
