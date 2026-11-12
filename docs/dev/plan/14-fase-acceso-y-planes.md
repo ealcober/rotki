@@ -20,8 +20,8 @@ Diseño: `../arquitectura/05-adr-monetizacion-y-acceso.md`.
 7. **Recepción de pagos propia** (ADR 05, punto 6): generación de pedidos, identificación por dirección
    derivada, etiqueta o importe único según la red, vigilante de pagos, cola de revisión y emisión de
    licencia. Primero la infraestructura común; después un adaptador por red: Bitcoin, Ethereum,
-   Hyperliquid, XRP Ledger y Solana. Página de planes en la web pública con el plan destacado que fije el
-   ADR 05.
+   Hyperliquid, XRP Ledger y Solana. Página de planes en la web pública con High Freq Trader
+   destacado.
 8. **Beta cerrada** con licencias emitidas a mano antes de abrir la venta; mide la proporción de
    usuarios que supera cada límite (afirmación 18).
 9. **Condiciones de uso, privacidad y aviso fiscal.**

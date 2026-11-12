@@ -21,3 +21,6 @@ Registro fechado de hitos. Cada entrada describe el estado que deja, en presente
   High Freq Trader ejercicios ilimitados y 12 meses; al alcanzar un límite no se guarda más ni se exporta
   el informe; el administrador queda fuera de toda restricción; redes de cobro Bitcoin, Ethereum,
   Hyperliquid, XRP Ledger y Solana, con la infraestructura común primero.
+- Límites confirmados (Trader 100 y Pro-Trader 10.000 transacciones por ejercicio); plan destacado High
+  Freq Trader; web pública en el dominio provisional `tax.papertrading.es`. Pendientes: direcciones de
+  cobro y nombre del producto.

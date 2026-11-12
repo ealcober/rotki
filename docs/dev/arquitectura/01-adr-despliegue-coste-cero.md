@@ -10,9 +10,9 @@ cifrada por usuario, frontend Electron o web servido por el propio backend, y se
 en loopback (`rotkehlchen/mcp/server.py:29`). Toda la lógica fiscal y los datos viven en la máquina que
 ejecuta la instancia.
 
-Requisitos del usuario: uso personal inmediato; app pública con anuncios en un subdominio de
-`ealcober.com` más adelante; soporte de volúmenes de alta frecuencia (millones de operaciones); acceso por
-Telegram; capa agéntica con acceso total al contexto del usuario.
+Requisitos del usuario: uso personal inmediato; app pública con anuncios en `tax.papertrading.es` más
+adelante; soporte de volúmenes de alta frecuencia (millones de operaciones); acceso por Telegram; capa
+agéntica con acceso total al contexto del usuario.
 
 Vías de ingreso: planes de pago según volumen de transacciones, años de historial y periodo de acceso, y
 anuncios en la web pública (ADR 05).
@@ -38,7 +38,7 @@ Durante el desarrollo solo accede el usuario.
    - **Cloudflare Tunnel + Cloudflare Access** en `fiscal.ealcober.com`, con login restringido al correo del
      usuario (depende de la afirmación 6 del registro).
 2. **Superficie pública (fase 10).** La parte pública es **distribución, no alojamiento de datos**: web
-   estática en un subdominio de `ealcober.com` con documentación, guías fiscales, descargas del fork y
+   estática en `tax.papertrading.es` con documentación, guías fiscales, descargas del fork y
    anuncios. Cada usuario ejecuta su propia instancia (escritorio o Docker), así que el volumen de cada
    trader de alta frecuencia lo absorbe su propia máquina y el coste de servidor es nulo con cualquier
    número de usuarios. Los datos fiscales nunca salen del equipo del usuario, lo que reduce la exposición
@@ -60,5 +60,6 @@ Durante el desarrollo solo accede el usuario.
 ## Preguntas abiertas para el usuario
 
 1. ¿Tailscale o Cloudflare Tunnel para el acceso remoto personal?
-2. ¿El DNS de `ealcober.com` está en Cloudflare o en otro proveedor?
+2. ¿El DNS de `ealcober.com` (acceso personal) y el de `papertrading.es` (web pública) están en Cloudflare o
+   en otro proveedor?
 3. ¿Se acepta el modelo «web pública = distribución + contenidos con anuncios; datos siempre en local»?

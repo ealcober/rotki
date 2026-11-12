@@ -19,7 +19,8 @@ Condicionantes:
   es lo que el código público no da por sí solo: builds firmadas y actualizadas, reglas fiscales revisadas
   cada ejercicio, servicios (licencias, copias en Drive), guías y soporte (afirmación 16). Es el modelo que
   usa el propio rotki con su suscripción (`rotkehlchen/premium/`).
-- El producto de pago lleva nombre y marca propios (afirmación 15).
+- El producto de pago lleva nombre y marca propios (afirmación 15). Dominio provisional:
+  `tax.papertrading.es`.
 
 ## Decisión propuesta
 
@@ -47,8 +48,8 @@ Condicionantes:
    | Plan | Ejercicios fiscales | Transacciones por ejercicio | Periodo de acceso | Precio |
    |---|---|---|---|---|
    | Trader | 1 | 100 | indefinido | 0 € |
-   | Pro-Trader (plan destacado) | 2 | 10.000 | 1 mes | 49,99 € |
-   | High Freq Trader | sin límite | sin límite | 12 meses | 99,99 € |
+   | Pro-Trader | 2 | 10.000 | 1 mes | 49,99 € |
+   | High Freq Trader (plan destacado) | sin límite | sin límite | 12 meses | 99,99 € |
 
    - **Ejercicios fiscales:** años naturales con eventos importados. Un usuario puede trabajar un solo
      ejercicio o varios; el plan fija cuántos admite a la vez. Los años anteriores al primer ejercicio
@@ -66,6 +67,8 @@ Condicionantes:
      en dos activos (104) o con una sola posición de staking con recompensa diaria (365); el plan
      gratuito queda como prueba con datos reales. La proporción real de usuarios que supera el límite es
      la afirmación 18 y se mide en la beta cerrada.
+   - **Plan destacado: High Freq Trader.** Es el de menor precio por mes (unos 8,33 €), sin límites;
+     Pro-Trader queda como pase para una sola declaración.
    - Las cifras de la tabla viven en un único fichero de configuración.
 4. **Al alcanzar un límite.** Todos los planes tienen las mismas capacidades (agente, grafo, copias en
    Drive, exportaciones); los límites son solo los del punto 3. Al alcanzar el límite de transacciones o
@@ -117,9 +120,5 @@ Condicionantes:
 
 ## Preguntas abiertas para el usuario
 
-1. Confirmación de las cifras propuestas: 100 y 10.000 transacciones por ejercicio.
-2. Plan destacado: con Pro-Trader a 49,99 € por un mes y High Freq Trader a 99,99 € por doce, el segundo
-   ofrece el menor precio por mes; ¿se mantiene Pro-Trader como destacado (pase de campaña) o se destaca
-   High Freq Trader?
-3. Direcciones y claves públicas de cobro por red.
-4. Nombre y marca del producto.
+1. Direcciones y claves públicas de cobro por red.
+2. Nombre y marca del producto, sobre el dominio provisional `tax.papertrading.es`.

@@ -1,6 +1,6 @@
 # Fase 10 — Superficie pública
 
-**Resultado:** un subdominio de `ealcober.com` con la web del proyecto, guías fiscales, descargas e
+**Resultado:** `tax.papertrading.es` con la web del proyecto, guías fiscales, descargas e
 ingresos por anuncios; los datos de cada usuario siguen en su máquina.
 Diseño: `../arquitectura/01-adr-despliegue-coste-cero.md`.
 
