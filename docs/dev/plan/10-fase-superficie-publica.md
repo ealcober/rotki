@@ -12,6 +12,8 @@ Diseño: `../arquitectura/01-adr-despliegue-coste-cero.md`.
    changelog.
 3. **Distribución:** releases del fork en GitHub (binarios de rotki con la capa ES) y imagen Docker.
 4. **Anuncios y analítica** respetuosos con el RGPD; consentimiento donde proceda.
+   Los anuncios viven solo en la web pública, nunca dentro de la aplicación con datos fiscales
+   (`../arquitectura/05-adr-monetizacion-y-acceso.md`).
 5. **Licencia:** aviso AGPL-3.0, enlace al código, créditos a rotki.
 6. **Soporte:** issues en GitHub; sin datos de usuarios en servidores propios.
 

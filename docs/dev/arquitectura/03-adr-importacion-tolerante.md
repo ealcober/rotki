@@ -21,11 +21,15 @@ formato de un importador existente o en eventos de rotki:
 3. **Confianza explícita:** por encima del umbral se importa; en la zona intermedia se muestra al usuario
    el mapeo propuesto columna a columna para que lo confirme; por debajo, se rechaza con el motivo. Un
    mapeo confirmado se guarda como variante nueva.
+   Cada confirmación y cada dato que el fichero no trae (zona horaria, moneda de la comisión) se resuelve
+   con una pregunta y queda en el registro de decisiones (ADR 08).
 4. **Sin ausencias leídas como valor:** una columna obligatoria vacía o ilegible produce un aviso por fila,
    nunca un cero.
 5. **Deduplicación** por identificador de origen (`transaction_id` o equivalente) y, si no existe, por
    huella (fecha, activo, cantidad, tipo).
 6. **Escala:** lectura en streaming por bloques e inserción en lotes, para ficheros de millones de filas.
+   La importación es una tarea en segundo plano con progreso, cancelación y reanudación desde el último
+   lote confirmado (ADR 07).
 
 ## Consecuencias
 

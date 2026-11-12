@@ -22,6 +22,7 @@ rotki ya incluye `d3-force` y un grafo de interacciones entre direcciones en
    alteran eventos ni cálculos.
 4. **Escala:** con más de unos pocos miles de nodos, el grafo arranca agregado por cuenta y activo y se
    expande bajo demanda; el renderizado pasa a canvas cuando el número de elementos lo exige.
+   La agregación se calcula en el backend sobre totales precalculados, con los presupuestos del ADR 07.
 5. **Diseño:** estética «panel de control» oscura y luminosa, con modo claro; responsive con panel de
    detalle en hoja inferior en móvil. Se aplican las convenciones de diseño y accesibilidad del frontend de
    rotki.

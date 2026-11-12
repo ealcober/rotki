@@ -73,7 +73,7 @@ Clave de deduplicación: `Order ID` y `Transaction ID`. Solo las filas con `Stat
 | `Precio Completo` | decimal | precio de ejecución en la moneda cotizada |
 | `Monto Ejecutado` | decimal | cantidad de la moneda base |
 | `Total` | decimal | importe en la moneda cotizada |
-| `Comisión` | decimal | la moneda de la comisión no figura en el fichero: se infiere y se marca con un aviso |
+| `Comisión` | decimal | la moneda de la comisión no figura en el fichero: se pregunta al usuario y la respuesta queda en el registro de decisiones (ADR 08 y 09) |
 | `Rol` | enum | `Maker`, `Taker` |
 
 El fichero no trae identificador de operación: la deduplicación usa la huella (par, tiempo, dirección,

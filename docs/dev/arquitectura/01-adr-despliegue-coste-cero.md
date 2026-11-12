@@ -14,6 +14,9 @@ Requisitos del usuario: uso personal inmediato; app pública con anuncios en un 
 `ealcober.com` más adelante; soporte de volúmenes de alta frecuencia (millones de operaciones); acceso por
 Telegram; capa agéntica con acceso total al contexto del usuario.
 
+Vías de ingreso previstas: planes de pago de 1, 3 y 5 años, anuncios en la web pública, o ambas (ADR 05).
+Durante el desarrollo solo accede el usuario.
+
 ## Opciones evaluadas
 
 | Opción | Encaje con rotki | Volumen alto | Coste | Uso comercial | Veredicto |
@@ -46,6 +49,12 @@ Telegram; capa agéntica con acceso total al contexto del usuario.
 - La licencia AGPL-3.0 de rotki obliga a publicar el código de cualquier versión modificada que se ofrezca
   por red; el fork ya es público, así que la obligación queda cubierta mientras `origin` esté al día.
 - Si la superficie pública llega a necesitar cómputo de servidor, se reabre este ADR.
+- Los planes de pago se apoyan en licencias verificables sin conexión y en un servicio mínimo de
+  licencias; los datos fiscales siguen en el equipo de cada usuario (ADR 05).
+- La persistencia fuera del equipo es opcional y va al Drive del propio usuario como copia cifrada
+  (ADR 06).
+- La restricción de coste cero se refiere a pagos recurrentes fijos; las comisiones por venta de un
+  intermediario de pagos son proporcionales al ingreso y quedan fuera de ella (afirmación 14).
 
 ## Preguntas abiertas para el usuario
 

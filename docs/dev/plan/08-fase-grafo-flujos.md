@@ -14,6 +14,7 @@ Diseño: `../arquitectura/04-adr-visualizacion-grafo.md`.
 4. **Filtros:** periodo, activo, tipo de evento, nivel de aviso (resalta lo que señala la fase 7).
 5. **Escala:** vista agregada inicial, expansión bajo demanda, canvas por encima de un umbral de
    elementos.
+   Presupuestos de respuesta del ADR 07.
 6. **Diseño y accesibilidad:** tema oscuro y claro, responsive, teclado, contraste.
 
 ## Tests

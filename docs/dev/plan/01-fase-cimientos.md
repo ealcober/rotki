@@ -15,11 +15,14 @@ volumen alto y existe un perfil fiscal español.
    medición de: importación, consulta de historial, informe de P&L FIFO, tamaño de la base. Predicción
    escrita antes de medir; el resultado decide si la fase 3 necesita inserción por lotes propia y si el
    cálculo FIFO necesita optimización.
+   Las mismas mediciones fijan los presupuestos de respuesta por tramo de volumen del ADR 07.
 5. **Perfil fiscal ES.** Conjunto de ajustes contables de rotki para España: FIFO, EUR como moneda,
    permuta cripto-cripto como transmisión, año natural. Se implementa como preset seleccionable, sin
    cambiar los valores por defecto de upstream.
 6. **`data/privado/`.** Carpeta local ignorada por git para exports reales; el usuario deposita ahí sus
    CSV de Bybit, KuCoin y demás para completar `../03-formatos-csv.md`.
+7. **Acceso en desarrollo.** La instancia escucha solo en loopback; el acceso remoto del usuario va por la
+   red privada elegida en el ADR 01. Se verifica que ningún puerto queda expuesto a Internet.
 
 ## Tests
 

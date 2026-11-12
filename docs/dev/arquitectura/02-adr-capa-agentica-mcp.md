@@ -25,6 +25,9 @@ detecte discrepancias, las clasifique por gravedad y proponga correcciones justi
    | `fork_tax_summary_es` | resumen fiscal ES del año con trazabilidad | lectura |
    | `fork_propose_fix` | propuesta de corrección con su efecto en el informe | lectura |
    | `fork_apply_fix` | aplica una corrección aprobada | **escritura** |
+   | `fork_open_questions` | preguntas pendientes para el usuario, con su porqué y sus opciones (ADR 08) | lectura |
+   | `fork_answer_question` | registra la respuesta del usuario y su motivo en el registro de decisiones | **escritura** |
+   | `fork_optimization_proposals` | simulaciones de mejora sobre los datos del usuario, con cifras y fuente (ADR 08) | lectura |
 
 3. **Escritura con confirmación.** Toda herramienta que modifique datos devuelve primero una propuesta con
    identificador y efecto calculado; solo `fork_apply_fix` con ese identificador escribe, y deja rastro en
@@ -57,3 +60,8 @@ la puerta de las herramientas de upstream.
 
 Cada aviso lleva: eventos implicados, importe afectado en EUR, dirección del sesgo (sobreestima o
 infraestima la base imponible) y opciones de resolución.
+
+La jerarquía se implementa ampliando el motor de incidencias de rotki
+(`rotkehlchen/history/data_issues/`): los detectores del fork escriben con `DataIssuesManager.write_issue`
+y `IssueSeverity` recibe los cuatro niveles. Las propuestas de optimización no son avisos: viven aparte,
+nunca bloquean el informe y nunca se aplican solas (ADR 08).

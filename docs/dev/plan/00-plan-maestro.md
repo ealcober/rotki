@@ -15,6 +15,12 @@ Una herramienta de fiscalidad cripto para residentes en España, construida sobr
 6. muestra los flujos del periodo como grafo interactivo;
 7. ofrece un agente (MCP) con acceso a todo el contexto, también por Telegram;
 8. cuesta cero euros de infraestructura.
+9. responde siempre, también con historiales de millones de operaciones;
+10. pregunta lo que no sabe catalogar o lo que falta, explica por qué y refleja cada decisión en el informe;
+11. computa todas las comisiones, en todos los casos, una sola vez;
+12. propone mejoras de la declaración y de los hábitos del usuario como simulaciones con cifras;
+13. guarda copias cifradas e informes en el Drive del propio usuario;
+14. admite acceso de terceros por planes de pago de 1, 3 y 5 años, y anuncios en la web pública.
 
 ## Fases
 
@@ -25,14 +31,19 @@ Una herramienta de fiscalidad cripto para residentes en España, construida sobr
 | 3 | `03-fase-importacion-tolerante.md` | detector de formatos, Trade Republic, Bybit CSV, variantes KuCoin | 1 |
 | 4 | `04-fase-rendimientos-devengo.md` | intereses y staking valorados en el devengo, clasificados para IRPF | 1 |
 | 5 | `05-fase-redes.md` | cobertura verificada de HYPE, ETH, BTC, SOL; XRP Ledger nuevo | 4 |
-| 6 | `06-fase-informe-fiscal-es.md` | informe anual ES con trazabilidad; datos del 721 | 3, 4 |
-| 7 | `07-fase-conciliacion-agente.md` | motor de avisos, preguntas al usuario, herramientas MCP | 3, 4, 5 |
+| 6 | `06-fase-informe-fiscal-es.md` | informe anual ES con trazabilidad; datos del 721 | 3, 4, 11, 12 |
+| 7 | `07-fase-conciliacion-agente.md` | motor de avisos, propuestas de optimización, herramientas MCP | 3, 4, 5, 12 |
 | 8 | `08-fase-grafo-flujos.md` | grafo interactivo de flujos con categorías y trazabilidad | 6 |
 | 9 | `09-fase-telegram.md` | bot de Telegram como cliente del agente | 7 |
 | 10 | `10-fase-superficie-publica.md` | web pública en subdominio, distribución, anuncios | 6, 8 |
+| 11 | `11-fase-comisiones.md` | tratamiento de comisiones en todos los casos, con invariantes | 1 |
+| 12 | `12-fase-clasificacion-y-decisiones.md` | clasificador por capas, preguntas al usuario, registro de decisiones | 3, 4 |
+| 13 | `13-fase-respaldo-drive.md` | copias cifradas e informes en el Drive del usuario | 1 |
+| 14 | `14-fase-acceso-y-planes.md` | licencias, planes de 1, 3 y 5 años, acceso de terceros | 10, 13 |
 
-Camino mínimo para la declaración del usuario: fases 1 → 3 → 4 → 6. Las fases 2, 5, 7, 8 y 9 amplían;
-la 10 publica.
+Camino mínimo para la declaración del usuario: fases 1 → 3 → 4 → 11 → 12 → 6. Las fases 2, 5, 7, 8, 9 y 13
+amplían; la 10 publica y la 14 abre el acceso a terceros. El número de fase es el orden de creación del
+documento; el orden de ejecución lo fija la columna «Depende de».
 
 ## Criterios comunes a todas las fases
 
@@ -45,6 +56,12 @@ la 10 publica.
 - **Afirmaciones sin verificar:** `../04-registro-afirmaciones.md`. Una fase no arranca sobre una
   afirmación de la que depende y que sigue sin verificar.
 - **Privacidad:** ningún dato real del usuario entra en git.
+- **Respuesta:** ninguna operación bloquea la interfaz; cada fase declara su presupuesto de tiempo y
+  memoria por tramo de volumen y lo mide con el benchmark de la fase 1 (`../arquitectura/07-adr-escala-y-respuesta.md`).
+- **Decisiones:** ningún valor por defecto sustituye a un dato desconocido; se pregunta y se registra
+  (`../arquitectura/08-adr-clasificacion-y-decisiones.md`).
+- **Acceso:** hasta la fase 14 la instancia es de un único usuario y solo escucha en loopback o en la red
+  privada del usuario.
 
 ## Aviso sobre el contenido fiscal
 

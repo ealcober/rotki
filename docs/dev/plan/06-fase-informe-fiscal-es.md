@@ -19,7 +19,9 @@ modelo 721, en el que cada cifra abre la lista de eventos que la producen.
 3. **Saldos a 31/12 por custodio** y marca de custodia extranjera por entidad (configurable).
 4. **Avisos bloqueantes:** el informe no se cierra con `ERROR` o `INCONGRUENCIA` abiertos (fase 7); se
    emite como borrador con la lista de pendientes.
-5. **Justificación:** anexo con los criterios fiscales aplicados y su fuente.
+5. **Justificación:** anexo con los criterios fiscales aplicados y su fuente, y con cada decisión del
+   registro de decisiones que afecta al ejercicio: qué se preguntó, qué se eligió, por qué y a qué
+   importes afecta (fase 12).
 6. **Vista en el frontend** y exportación (CSV, JSON, PDF).
 
 ## Tests

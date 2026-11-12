@@ -61,6 +61,17 @@ Aplican las reglas de usuario (`~/.claude/CLAUDE.md`) y, además, estas propias 
    importe sin rastro hasta sus eventos es un defecto.
 6. **Ninguna afirmación fiscal sin fuente.** Las reglas fiscales citan la norma o la consulta vinculante de
    la DGT. Lo que no tiene fuente va al registro de `docs/dev/04-registro-afirmaciones.md`.
+7. **La interfaz responde siempre.** Toda operación cuyo coste crece con el historial corre en segundo
+   plano, con progreso y cancelación, y todo listado se pagina en el servidor
+   (`docs/dev/arquitectura/07-adr-escala-y-respuesta.md`).
+8. **Nada se decide en silencio.** Lo que la herramienta no sabe catalogar, o la información que falta, se
+   pregunta al usuario explicando por qué importa; la respuesta y su motivo quedan en el registro de
+   decisiones y se reflejan en el informe (`docs/dev/arquitectura/08-adr-clasificacion-y-decisiones.md`).
+9. **Toda comisión se computa una vez y en su sitio.** Cada comisión es un evento ligado a su operación,
+   con el tratamiento de `docs/dev/arquitectura/09-adr-comisiones.md`.
+10. **Acceso por etapas.** Durante el desarrollo la instancia es de un único usuario y no se expone a
+    Internet; el acceso de terceros y los planes de pago llegan con
+    `docs/dev/arquitectura/05-adr-monetizacion-y-acceso.md`.
 
 ## Convenciones
 
@@ -81,7 +92,7 @@ Aplican las reglas de usuario (`~/.claude/CLAUDE.md`) y, además, estas propias 
 | `03-formatos-csv.md` | formatos de exportación de exchanges y brokers (solo cabeceras) |
 | `04-registro-afirmaciones.md` | afirmaciones sin verificar y afirmaciones caídas |
 | `05-bitacora.md` | bitácora fechada del fork |
-| `arquitectura/` | ADRs: despliegue, capa agéntica, importación, visualización |
+| `arquitectura/` | ADRs 01–09: despliegue, capa agéntica, importación, visualización, monetización y acceso, almacenamiento en Drive, escala, clasificación y decisiones, comisiones |
 | `plan/00-plan-maestro.md` | plan de desarrollo completo y orden de fases |
 | `plan/NN-fase-*.md` | una fase por documento |
 

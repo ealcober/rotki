@@ -23,6 +23,7 @@ ese valor es el coste de adquisición de las monedas recibidas para su venta pos
 2. **Precio en el instante.** Verificar la granularidad de los oráculos de precio de rotki para el momento
    exacto (hora, no solo día) y el comportamiento cuando falta precio: ninguna ausencia se convierte en
    cero; se produce un aviso `ERROR` con el evento.
+   El aviso abre una pregunta al usuario con las opciones de tratamiento y su efecto (fase 12).
 3. **Regla de agregación diaria** opcional (cambio medio del día) para rendimientos muy frecuentes, con
    el detalle por evento conservado para la trazabilidad.
 4. **Lote de adquisición:** cada rendimiento recibido abre un lote FIFO con coste igual a su valoración,

@@ -13,6 +13,16 @@ contenido pasa al documento que corresponda con su fuente.
 | 4 | Cloudflare Pages y Workers en plan gratuito permiten uso comercial con anuncios. | Fase 10 | Lectura de los términos vigentes de Cloudflare |
 | 5 | El staking delegado (como el de HYPE) se califica igual que el staking directo, como rendimiento del capital mobiliario. | Fase 4 | La DGT no se ha pronunciado sobre el delegado según Cuatrecasas; seguimiento de nuevas consultas |
 | 6 | El dominio `ealcober.com` puede servir un subdominio vía Cloudflare (DNS gestionado por Cloudflare o delegación del subdominio). | Fase 10 | Revisión de la configuración DNS actual del dominio |
+| 7 | Las comisiones de compra forman parte del valor de adquisición y las de venta minoran el valor de transmisión (art. 35 LIRPF). | Fase 11 | Lectura del artículo en el BOE consolidado |
+| 8 | Pagar una comisión en un criptoactivo distinto del negociado (BNB, KCS, HYPE como gas) es una transmisión de ese activo a valor de mercado, con su propia ganancia o pérdida. | Fase 11 | Consultas de la DGT sobre permutas y pagos con criptoactivos |
+| 9 | La comisión de red al mover fondos entre wallets propias es transmisión del activo gastado; su consideración como gasto deducible no tiene criterio expreso. | Fase 11 | Búsqueda de consultas de la DGT; mientras tanto es una decisión del usuario registrada (ADR 08) |
+| 10 | La regla de recompra de dos meses (art. 33.5 LIRPF) no alcanza a los criptoactivos. | Fase 7, propuestas de optimización | Lectura del artículo y de consultas de la DGT; hasta verificarla, las propuestas la aplican como restricción |
+| 11 | El plazo de prescripción de cuatro años (art. 66 LGT) justifica conservar datos y ofrecer planes plurianuales. | Fase 14 | Lectura del artículo |
+| 12 | El ámbito `drive.file` de la API de Google Drive limita la app a los ficheros que ella crea y evita la auditoría de seguridad exigida a los ámbitos restringidos. | Fase 13 | Documentación vigente de Google sobre ámbitos OAuth y verificación de apps |
+| 13 | Una base SQLite abierta dentro de una carpeta sincronizada por un cliente de nube puede corromperse. | Fase 13 | Documentación de SQLite sobre corrupción de ficheros; la decisión del ADR 06 no depende del resultado, solo su justificación |
+| 14 | Un intermediario de pagos que actúa como vendedor registrado gestiona el IVA de ventas digitales en la UE y cobra por transacción, sin cuota fija. | Fase 14 | Condiciones vigentes de los proveedores candidatos |
+| 15 | El nombre y la marca «rotki» no pueden usarse para un producto derivado de pago. | Fase 14 | Política de marca de rotki y consulta a sus mantenedores |
+| 16 | La AGPL-3.0 permite cobrar por el acceso a builds y servicios de un producto derivado mientras el código fuente siga disponible. | Fase 14 | Lectura de `LICENSE.md` y de las FAQ de la FSF sobre venta de software libre |
 
 ## Afirmaciones verificadas que fijan decisiones
 
@@ -23,6 +33,8 @@ contenido pasa al documento que corresponda con su fuente.
 | El Always Free de Oracle Cloud para Ampere A1 queda en 1.500 OCPU-h y 9.000 GB-h al mes (2 OCPU / 12 GB). | [Linuxiac](https://linuxiac.com/?p=214114) |
 | El MCP de rotki exige suscripción Basic o superior para sus herramientas premium. | `rotkehlchen/mcp/premium.py:13` |
 | rotki no soporta XRP Ledger. | `rotkehlchen/types.py:468` |
+| rotki incluye un motor de incidencias de datos con gravedad única `warning`. | `rotkehlchen/history/data_issues/constants.py:20` |
+| Vercel Hobby considera uso comercial la inclusión de anuncios. | [Vercel Fair Use Guidelines](https://vercel.com/docs/limits/fair-use-guidelines) |
 
 ## Afirmaciones caídas
 
@@ -31,3 +43,4 @@ contenido pasa al documento que corresponda con su fuente.
 | «Vercel gratis sirve para la app pública con anuncios» | Términos del plan Hobby: uso no comercial | Verificar términos de uso, no solo cuotas |
 | «Oracle Always Free da 4 OCPU / 24 GB» | Documentación de Oracle con los nuevos límites | Las cifras de guías de terceros caducan |
 | «Hay que construir la capa MCP desde cero» | `rotkehlchen/mcp/` existe con registro, privacidad y transporte | Mapear upstream antes de diseñar |
+| «El motor de avisos se construye desde cero» | `rotkehlchen/history/data_issues/` existe con tabla, estados, detectores y remediación | Mapear upstream antes de diseñar, también lo que no se buscaba |

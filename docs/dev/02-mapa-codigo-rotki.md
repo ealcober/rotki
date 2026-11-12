@@ -77,6 +77,49 @@ rotki incluye un servidor MCP propio en `rotkehlchen/mcp/` (dependencia `mcp==1.
   interacciones entre direcciones (`interaction-layout.ts`, `AddressInteractionGraph.vue`,
   `AddressInteractionClusters.vue`). Es la base del grafo de flujos del fork (fase 8).
 
+## Incidencias de datos
+
+rotki incluye un motor de incidencias en `rotkehlchen/history/data_issues/`, con tabla `data_issues`
+(tipo, gravedad, estado, intentos de remediación, `payload_json`). Es la base del motor de avisos del fork
+(fase 7).
+
+| Pieza | Ubicación | Notas |
+|---|---|---|
+| Tipos de incidencia | `rotkehlchen/history/data_issues/constants.py:5` (`IssueKind`) | saldo actual discrepante, saldo negativo, token con rebase, bridge sin emparejar |
+| Estados | `constants.py:12` (`IssueState`) | `open`, `auto_remediating`, `unresolved`, `resolved`, `dismissed` |
+| Gravedad | `constants.py:20` (`IssueSeverity`) | un único nivel, `warning`; el fork amplía la jerarquía |
+| Escritura de incidencias | `rotkehlchen/history/data_issues/manager.py:141` (`DataIssuesManager`), `write_issue` en `:147` | punto de extensión para los detectores del fork |
+| Detectores | `rotkehlchen/history/data_issues/detectors/` | patrón a seguir |
+| Remediación automática | `rotkehlchen/tasks/data_issues.py:317` (`run_data_issue_remediation`) | |
+
+## Tareas en segundo plano y paginación
+
+| Pieza | Ubicación | Uso en el fork |
+|---|---|---|
+| Consultas asíncronas de la API | `rotkehlchen/api/rest.py:398` (argumento `async_query`), `:663` (`_query_async`) | toda operación larga del fork se expone así |
+| Tareas periódicas | `rotkehlchen/tasks/` (`manager.py`, `supervisor.py`) | detectores y copias programadas |
+| Paginación de filtros | `rotkehlchen/db/filtering.py:182` (`LIMIT`/`OFFSET`) | todo listado del fork pagina en servidor |
+| Eventos de P&L persistidos | `rotkehlchen/db/reports.py:84` (`DBAccountingReports`), inserción en `:240` | el informe ES lee eventos ya calculados |
+| Servicio Rust | `colibri/src/` | candidato para rutas críticas de rendimiento |
+
+El MCP de upstream carga las tablas analíticas con `pandas` (`rotkehlchen/mcp/analytics.py:14`); las
+herramientas del fork agregan en SQL para acotar la memoria (ADR 07).
+
+## Comisiones
+
+| Pieza | Ubicación |
+|---|---|
+| Subtipo de evento de comisión | `rotkehlchen/history/events/structures/types.py:64` (`FEE`), categoría en `:199` |
+| Ajuste de comisiones en el coste | `rotkehlchen/db/settings.py:73` (`include_fees_in_cost_basis`, activo por defecto) |
+
+## Sincronización y copias de upstream
+
+- `rotkehlchen/premium/sync.py:76` (`PremiumSyncManager`): sincronización de la base del usuario con los
+  servidores de rotki, ligada a su suscripción. El fork no la modifica; su almacenamiento propio es el
+  ADR 06.
+- La base del usuario es un fichero SQLite cifrado; rotki genera copias locales en cada actualización de
+  esquema (`rotkehlchen/db/dbhandler.py:244`, `DB_BACKUP_RE`).
+
 ## Documentación de upstream
 
 - `docs/` es Sphinx con `source_suffix = '.rst'` (`docs/conf.py:70`): los `.md` de `docs/dev/` no entran en
