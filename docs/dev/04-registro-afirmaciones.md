@@ -25,6 +25,7 @@ contenido pasa al documento que corresponda con su fuente.
 | 17 | Los pagos entrantes en cada red de cobro se detectan con fiabilidad usando solo APIs y nodos públicos gratuitos. | Fase 14 | Prueba por red con pagos reales de importe mínimo, cuando el usuario fije las redes |
 | 18 | La mayoría de usuarios supera 100 transacciones por ejercicio (DCA, staking con recompensa diaria). | ADR 05, límites | Medición en la beta cerrada |
 | 19 | Cada red de cobro admite la identificación propuesta sin claves privadas en el servicio: direcciones derivadas desde clave pública extendida (Bitcoin, Ethereum, Hyperliquid), etiqueta de destino (XRP Ledger) y clave de referencia (Solana). | Fase 14 | Documentación de cada red y prueba con un pago de importe mínimo por adaptador |
+| 20 | Las vistas de rotki que usa el fork son utilizables en anchos de móvil y tablet. | Todas las fases con interfaz | Recorrido de la fase 1, punto 8 |
 
 ## Afirmaciones verificadas que fijan decisiones
 

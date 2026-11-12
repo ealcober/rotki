@@ -23,6 +23,10 @@ volumen alto y existe un perfil fiscal español.
    CSV de Bybit, KuCoin y demás para completar `../03-formatos-csv.md`.
 7. **Acceso en desarrollo.** La instancia escucha solo en loopback; el acceso remoto del usuario va por la
    red privada elegida en el ADR 01. Se verifica que ningún puerto queda expuesto a Internet.
+8. **Estado responsive del frontend de rotki** (afirmación 20): recorrido de las vistas que usa el fork
+   (importación, historial, informe de P&L, estadísticas) en anchos de móvil, tablet y escritorio, con
+   capturas fuera de git. El resultado fija qué adaptaciones de upstream necesita el fork y se anota en
+   `../02-mapa-codigo-rotki.md`.
 
 ## Tests
 
@@ -33,3 +37,4 @@ volumen alto y existe un perfil fiscal español.
 
 - `../02-mapa-codigo-rotki.md`: añadir ubicación de los ajustes contables.
 - `../05-bitacora.md`: resultado del benchmark.
+- `../02-mapa-codigo-rotki.md`: estado responsive de las vistas de upstream que usa el fork.

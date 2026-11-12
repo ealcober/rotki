@@ -73,6 +73,10 @@ Aplican las reglas de usuario (`~/.claude/CLAUDE.md`) y, además, estas propias 
     Internet; el acceso de terceros y los planes de pago llegan con
     `docs/dev/arquitectura/05-adr-monetizacion-y-acceso.md`. El administrador queda fuera de toda
     restricción de plan en todas las etapas.
+11. **Responsive.** Toda vista del fork funciona en móvil, tablet y escritorio, con los puntos de corte
+    del frontend de rotki (`useBreakpoint`, por ejemplo en
+    `frontend/app/src/modules/core/common/use-area-visibility-store.ts:85`). Una vista que no se usa en
+    móvil no está terminada.
 
 ## Convenciones
 

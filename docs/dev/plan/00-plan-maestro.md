@@ -23,6 +23,7 @@ Una herramienta de fiscalidad cripto para residentes en España, construida sobr
 14. admite acceso de terceros por planes según volumen, años de historial y periodo de acceso (Trader,
     Pro-Trader, High Freq Trader) cobrados en criptoactivos, y anuncios en la web pública; el
     administrador queda fuera de toda restricción.
+15. funciona en móvil, tablet y escritorio.
 
 ## Fases
 
@@ -58,6 +59,8 @@ documento; el orden de ejecución lo fija la columna «Depende de».
 - **Afirmaciones sin verificar:** `../04-registro-afirmaciones.md`. Una fase no arranca sobre una
   afirmación de la que depende y que sigue sin verificar.
 - **Privacidad:** ningún dato real del usuario entra en git.
+- **Responsive:** toda fase con interfaz incluye pruebas en tres anchos (móvil, tablet y escritorio) y
+  no se cierra con una vista inutilizable en alguno de ellos.
 - **Respuesta:** ninguna operación bloquea la interfaz; cada fase declara su presupuesto de tiempo y
   memoria por tramo de volumen y lo mide con el benchmark de la fase 1
   (`../arquitectura/07-adr-escala-y-respuesta.md`).

@@ -24,3 +24,4 @@ Registro fechado de hitos. Cada entrada describe el estado que deja, en presente
 - Límites confirmados (Trader 100 y Pro-Trader 10.000 transacciones por ejercicio); plan destacado High
   Freq Trader; web pública en el dominio provisional `tax.papertrading.es`. Pendientes: direcciones de
   cobro y nombre del producto.
+- Requisito: la aplicación funciona en móvil, tablet y escritorio (guía, regla 11).
